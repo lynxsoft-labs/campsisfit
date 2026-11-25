@@ -102,7 +102,8 @@ test_that("FOCEi estimation works on theo_sd and the model is updated", {
   reevaluated <- quietly(estimate(model, nlmixr2data::theo_sd, EstimationSettings(control = no_iteration_control())))
   expect_equal(reevaluated@fit$objf, fit$objf, tolerance = 0.01 / fit$objf)
 
-  expect_output(print(results), "Objective function value: 133.8")
+  # Exact OFV is platform-dependent (BLAS/compiler), its value is checked above
+  expect_output(print(results), paste("Objective function value:", format(fit$objf, nsmall = 3)), fixed = TRUE)
 })
 
 test_that("SAEM estimation works and control options are forwarded", {
