@@ -1,0 +1,11 @@
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+.Renviron
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+.positai
+tests/testthat/Rplots.pdf

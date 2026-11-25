@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Campsisfit estimation settings",
+  "description": "Estimation settings of the campsisfit package",
+  "type": "object",
+  "properties": {
+    "method": {
+      "description": "Estimation method, forwarded to the 'est' argument of nlmixr2",
+      "enum": ["focei", "foce", "foi", "fo", "laplace", "saem", "posthoc"]
+    },
+    "control": {
+      "description": "Options passed to the nlmixr2 control function of the estimation method",
+      "type": "object",
+      "additionalProperties": {
+        "anyOf": [
+          { "type": ["string", "number", "boolean"] },
+          { "type": "array", "items": { "type": ["string", "number", "boolean"] } }
+        ]
+      }
+    }
+  },
+  "required": ["method"],
+  "additionalProperties": false
+}

@@ -1,0 +1,36 @@
+{
+  "version": "2.0",
+  "main": [
+    { "type": "comment", "text": "Individual parameters (log-normal)" },
+    { "lhs": "CL", "rhs": "exp(THETA_CL + ETA_CL)" },
+    { "lhs": "VC", "rhs": "exp(THETA_VC + ETA_VC)" },
+    { "lhs": "KA", "rhs": "exp(THETA_KA + ETA_KA)" }
+  ],
+  "ode": [
+    { "lhs": "KEL", "rhs": "CL / VC" },
+    { "type": "blank" },
+    { "compartment": "DEPOT", "rate": "-KA * DEPOT", "comment": "Absorption depot" },
+    { "compartment": "CENTR", "rate": "KA * DEPOT - KEL * CENTR", "comment": "Central compartment" },
+    { "type": "blank" },
+    { "lhs": "CP", "rhs": "CENTR / VC", "comment": "Plasma concentration" }
+  ],
+  "endpoints": [
+    {
+      "variable": "CP",
+      "error_model": "proportional",
+      "theta_prop": "PROP_ERR",
+      "sigma": "RUV",
+      "comment": "Observed plasma concentration"
+    }
+  ],
+  "parameters": [
+    { "type": "theta", "name": "CL", "value": 1.6, "label": "log Cl (L/hr)" },
+    { "type": "theta", "name": "VC", "value": 4.49980967033027, "label": "log Vc (L)" },
+    { "type": "theta", "name": "KA", "value": 0.1, "label": "log Ka (1/hr)" },
+    { "type": "theta", "name": "PROP_ERR", "value": 0.2, "min": 0, "max": 1, "label": "Proportional residual error (SD)" },
+    { "type": "omega", "name": "CL", "value": 0.1, "var_type": "var", "label": "BSV Cl" },
+    { "type": "omega", "name": "VC", "value": 0.1, "var_type": "var", "label": "BSV Vc" },
+    { "type": "omega", "name": "KA", "value": 0.1, "var_type": "var", "label": "BSV Ka" },
+    { "type": "sigma", "name": "RUV", "value": 1.0, "var_type": "var" }
+  ]
+}

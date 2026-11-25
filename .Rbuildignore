@@ -1,0 +1,10 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.github$
+^LICENSE\.md$
+^README\.Rmd$
+^air\.toml$
+^\.positai$
+^\.posit$
+^\.claude$
+^\.vscode$
