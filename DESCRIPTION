@@ -4,7 +4,7 @@ Title: Estimation of Campsis Models
 Version: 0.1.0
 Authors@R: c(
     person("Nicolas", "Luyckx", email = "nicolas.luyckx@lynxsoft.be", role = c("aut", "cre")),
-    person("Calvagone", role = "cph")
+    person("Lynxsoft", role = "cph")
   )
 Maintainer: Nicolas Luyckx <nicolas.luyckx@lynxsoft.be>
 Description: Estimate the parameters of pharmacokinetic (PK) /
@@ -13,8 +13,8 @@ Description: Estimate the parameters of pharmacokinetic (PK) /
     provides (FOCE, FOCEi, SAEM, etc.). Estimation settings are S7 objects
     that can be read from and written to JSON.
 License: GPL (>= 3)
-URL: https://github.com/Calvagone/campsisfit
-BugReports: https://github.com/Calvagone/campsisfit/issues
+URL: https://github.com/lynxsoft-labs/campsisfit
+BugReports: https://github.com/lynxsoft-labs/campsisfit/issues
 Depends:
     R (>= 4.1.0)
 Imports:
@@ -28,7 +28,7 @@ Suggests:
     nlmixr2data,
     testthat (>= 3.0.0)
 Remotes:
-    Calvagone/campsismod@model_extension
+    campsisverse/campsismod@model_extension
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US

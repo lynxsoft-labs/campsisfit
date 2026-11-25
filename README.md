@@ -1,7 +1,7 @@
 # campsisfit
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/Calvagone/campsisfit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Calvagone/campsisfit/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/lynxsoft-labs/campsisfit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lynxsoft-labs/campsisfit/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Estimation of [Campsis](https://campsisverse.github.io/) models. Models written with `campsismod` are exported to `nlmixr2` and fitted with the estimation methods it provides.
@@ -10,7 +10,7 @@ Estimation of [Campsis](https://campsisverse.github.io/) models. Models written 
 
 ```r
 # install.packages("remotes")
-remotes::install_github("Calvagone/campsisfit")
+remotes::install_github("lynxsoft-labs/campsisfit")
 ```
 
 ## Example

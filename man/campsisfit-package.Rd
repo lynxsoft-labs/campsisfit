@@ -11,8 +11,8 @@ Estimate the parameters of pharmacokinetic (PK) / pharmacodynamic (PD) models wr
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/Calvagone/campsisfit}
-  \item Report bugs at \url{https://github.com/Calvagone/campsisfit/issues}
+  \item \url{https://github.com/lynxsoft-labs/campsisfit}
+  \item Report bugs at \url{https://github.com/lynxsoft-labs/campsisfit/issues}
 }
 
 }
@@ -26,7 +26,7 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item Calvagone [copyright holder]
+  \item Lynxsoft [copyright holder]
 }
 
 }
